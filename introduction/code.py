@@ -2,7 +2,7 @@ const_maxNameLength = 150
 
 class Animal:
 
-    def __init__(self, name: str, weight: int, sound: str):
+    def __init__(self, name: str, weight: int, sound: str = None):
         self.name = name
         self.weight = weight
         self.sound = sound
@@ -22,3 +22,17 @@ class Animal:
         self._name = name
         
 
+class Dog(Animal):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.sound = 'Woof woof!'
+
+    def digHole(self):
+        return ('{0} <<digging a hole>> {0}'.format(self.sound))
+
+class Cat(Animal):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.sound = 'Miauu miauuu'
