@@ -5,6 +5,6 @@ Learning design patterns with the tutorial http://www.newthinktank.com/2012/08/d
 # Every subject includes
 * my own UML
 * code
-* tests
+* some tests
 
 
