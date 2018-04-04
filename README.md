@@ -7,4 +7,5 @@ Learning design patterns with the tutorial http://www.newthinktank.com/2012/08/d
 * code
 * some tests
 
-
+# Contents:
+* Strategy
