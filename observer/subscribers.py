@@ -9,10 +9,14 @@ class Observer(ABC):
 class DayMonthYear(Observer):
     def __init__(self, subject: 'Subject'):
         subject.register(self)
-        actualDate = '-'
+        self._actualDate = '-'
+
+    @property
+    def date(self):
+        return self._actualDate
 
     def update(self, updateData: datetime.date):
-        self.actualDate = dateFormat(updateData)
+        self._actualDate = dateFormat(updateData)
 
     def dateFormat(self, _date: datetime.date):
         return '{}.{}.{}'.format(_date.day, _date.month, _date.year)
